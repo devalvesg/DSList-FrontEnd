@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>DS LIST</title>
+</head>
+
+<body>
+    <header>
+        <h1>DS LIST</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a class="navListas" href="index.html">Listas</a></li>
+                <li><a href="allGames.html?all=true">Jogos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="containerInfo">
+        <aside>
+            <img class="imgUrl">
+            <h1 class="title"></h1>
+            <div class="scoreDiv">
+                <img class="edit" onclick="ConfirmacaoEdit()" src="./assets/lapis.png" alt="Editar">
+                <h4 class="score">Score:</h4>
+            </div>
+        </aside>
+        <main>
+            <h2 class="genre">Gênero: <img onclick="Confirmacao()" src="./assets/excluir.png" alt="Deletar"></h2>
+            <h2 class="year">Ano de lançamento: </h2>
+            <h2 class="platform">Plataforma: </h2>
+            <h4 class="longDescription"></h4>
+            <div class="confirmacao">
+                <h3 class="msgConfirm"></h3>  
+            </div>
+        </main>
+        <span class="alertaModificacao"></span>
+    </div>
+    <script src="script.js"></script>
+</body>
