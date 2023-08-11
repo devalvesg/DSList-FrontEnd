@@ -9,7 +9,7 @@ const containerGames = document.querySelector(".containerGames")
 
 
 async function getAllLists() {
-    const response = await fetch("http://localhost:8080/lists")
+    const response = await fetch("https://dslist-api.onrender.com/lists")
     const data = await response.json();
 
 
@@ -42,7 +42,7 @@ async function getAllLists() {
 }
 
 async function getGameByList() {
-    const response = await fetch(`http://localhost:8080/lists/${listId}/games`)
+    const response = await fetch(`https://dslist-api.onrender.com/lists/${listId}/games`)
     const data = await response.json();
     data.map((data) => {
         const div = document.createElement("div");
@@ -75,7 +75,7 @@ async function getGameByList() {
 
 
 async function getGame(gameId) {
-    const response = await fetch(`http://localhost:8080/games/${gameId}`)
+    const response = await fetch(`https://dslist-api.onrender.com/games/${gameId}`)
     const data = await response.json();
 
     const star = document.createElement("img")
@@ -186,7 +186,7 @@ function Cancelar() {
 function Modificar() {
     const input = confirmacao.querySelector(".inputScore")
 
-    fetch(`http://localhost:8080/games/${gameId}`,
+    fetch(`https://dslist-api.onrender.com/games/${gameId}`,
         {
             method: "PUT",
             headers: {
@@ -207,7 +207,7 @@ function Modificar() {
 }
 
 function Deletar() {
-    fetch(`http://localhost:8080/games/${gameId}`,
+    fetch(`https://dslist-api.onrender.com/games/${gameId}`,
         {
             method: "DELETE",
         }
@@ -223,7 +223,7 @@ function Deletar() {
 
 
 async function getAllGames() {
-    const response = await fetch(`http://localhost:8080/games`)
+    const response = await fetch(`https://dslist-api.onrender.com/games`)
     const data = await response.json();
 
     data.map((data) => {
@@ -304,7 +304,7 @@ function validarInformações() {
     }
 }
 async function pegarListas() {
-    const response = await fetch("http://localhost:8080/lists")
+    const response = await fetch("https://dslist-api.onrender.com/lists")
     const data = await response.json();
 
     data.map((data) => {
@@ -344,7 +344,7 @@ function handleCheckbox(checkbox) {
 function addNewGame() {
     if (validarInformações()) {
         year = parseInt(year.value)
-        fetch("http://localhost:8080/games",
+        fetch("https://dslist-api.onrender.com/games",
             {
                 headers: {
                     "Accept": "application/json",
